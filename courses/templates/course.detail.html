@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block page_content %}
+
+<div class="my-5">
+  <h1>{{ course.name }}</h1>
+  <a href="{% url 'teacher_detail' course.teacher.id %}" class="text-muted">{{ course.teacher.name }}</a>
+</div>
+
+<table class="table text-center mb-5">
+  <caption>Course info</caption>
+  <thead>
+    <tr>
+      <th scope="col">Category</th>
+      <th scope="col">Starting date</th>
+      <th scope="col">Duration</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>{{ course.category }}</td>
+          <td>{{ course.start }}</td>
+          <td>{{ course.Duration }} Months</td>
+      </tr>
+  </tbody>
+</table>
+
+<table class="table text-center">
+    <caption>Students in the course</caption>
+    <thead>
+      <tr>
+        <th scope="col">#ID</th>
+        <th scope="col">Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for student in course.student.all %}
+        <tr>
+            <th scope="row">{{ student.id }}</th>
+            <td>{{ student.name }}</td>
+            <td><a href="{% url 'student_detail' student.id %}" class="detail-btn">Show more</a></td>
+        </tr>
+      {% endfor %}
+      
+    </tbody>
+</table>
+
+{% endblock %}

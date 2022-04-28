@@ -1,0 +1,86 @@
+/* Base */
+
+#nav {
+    border-bottom: 1px solid #B2D5DB;
+}
+
+.nav-link {
+    border-bottom: 1px solid #F8F9FA;
+}
+
+.nav-link:hover {
+    border-bottom: 1px solid black;
+}
+
+/* Student, teacher detail */
+
+.box {
+    background-color: #EAF0F7;
+    box-shadow: 0 5px 15px 0 rgb(0, 0, 0, 0.25);
+}
+
+.left {
+    background-color: #B2D5DB;
+}
+
+.profile {
+    border-radius: 50%;
+}
+
+.name-text {
+    font-size: 3vw;
+    font-weight: 450;
+}
+
+.title-text {
+    font-size: 3.5vw;
+    font-weight: 600;
+}
+
+.info-text {
+    font-size: 2vw;
+    font-weight: 400;
+}
+
+/* courses_index */
+
+.card {
+    border: 1px solid #B2D5DB;
+    box-shadow: 0 5px 15px 0 rgb(0, 0, 0, 0.25);
+    transition: all .2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.index-btn {
+    background-color: #B2D5DB;
+    border: 1px solid #B2D5DB;
+    width: 100%;
+    color: black;
+}
+
+.index-btn:hover {
+    background-color: #EAF0F7;
+}
+
+.text-muted:hover {
+    color: #0066CC !important;
+    text-decoration: none;
+}
+
+/* courses_detail */
+
+table {
+    border: 1px solid lightgrey;
+}
+
+.detail-btn {
+    color: #0066CC;
+    text-decoration: none !important;
+}
+
+.detail-btn:hover {
+    color: black;
+}

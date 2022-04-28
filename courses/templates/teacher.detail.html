@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+
+<div class="box my-5">
+    <div class="row">
+        <div class="col-5 text-center left">
+            <img class="profile img-fluid p-5" src="{% static teacher.photo %}" alt="">
+            <h1 class="name-text mb-5">{{ teacher.name }}</h1>
+        </div>
+        <div class="col-7 px-5 right">
+            <div class="my-5">
+                <h1 class="title-text mb-4">Position</h1>
+                <h3 class="info-text">Course instructor</h3>
+            </div>
+            <div class="">
+                <h1 class="title-text mb-4">Contact info</h1>
+                <h3 class="info-text mb-3">{{ teacher.email }}</h1>
+                <h3 class="info-text">{{ teacher.mobile }}</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

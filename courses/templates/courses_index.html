@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block page_content %}
+
+<div class="my-5">
+    <h1 class="text-center display-3">Courses</h1>
+    <div class="row mt-5">
+        {% for course in courses %}
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">{{ course.name }}</h5>
+                        <div class="mb-4">
+                        <a href="{% url 'teacher_detail' course.teacher.id %}" class="card-subtitle text-muted">{{ course.teacher.name }}</a>
+                        </div>
+                        <div class="text-center">
+                            <a href="{% url 'courses_detail' course.pk%}" class="btn index-btn">Show more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
